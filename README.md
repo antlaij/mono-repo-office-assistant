@@ -1,0 +1,1 @@
+# mono-repo-office-assistant

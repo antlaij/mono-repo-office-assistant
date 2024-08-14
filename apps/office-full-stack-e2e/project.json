@@ -1,0 +1,9 @@
+{
+  "name": "office-full-stack-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/office-full-stack-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["office-full-stack"],
+  "// targets": "to see all targets run: nx show project office-full-stack-e2e --web",
+  "targets": {}
+}

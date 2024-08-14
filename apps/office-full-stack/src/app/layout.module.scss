@@ -1,0 +1,25 @@
+.mainContent {
+  display: flex;
+  margin: 0.5rem 0.5rem;
+  flex-grow: 1;
+}
+
+.flexCol {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--background-700);
+  border-radius: 0.3rem;
+  .header {
+    background-color: var(--background-850);
+    text-align: center;
+  }
+  .content {
+    text-align: center;
+    pre {
+      padding: 0.5rem 0.2rem;
+      text-wrap: balance;
+      text-align: start;
+    }
+  }
+}

@@ -122,9 +122,29 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
 # yarn v2
 .yarn/cache
 .yarn/unplugged
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# System Files
+.DS_Store
+Thumbs.db
+Application.md
+.env
+
+.nx/cache
+.nx/workspace-data
+
+# Next.js
+.next
+out

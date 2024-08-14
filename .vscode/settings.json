@@ -1,0 +1,9 @@
+{
+  "workbench.editor.customLabels.patterns": {
+      "**/README.md": "${filename}.${extname} - [ ${dirname} ]",
+      "**/page.tsx": "${filename}.${extname} - [ ${dirname} ]",
+      "**/index.html": "${filename}.${extname} - [ ${dirname} ]",
+      "**/index.ts": "${filename}.${extname} - [ ${dirname} ]",
+      "**/main.js": "${filename}.${extname} - [ ${dirname} ]"
+  }
+}

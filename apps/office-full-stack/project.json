@@ -1,0 +1,59 @@
+{
+  "name": "office-full-stack",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/office-full-stack",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project office-full-stack --web",  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/office-full-stack"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/office-full-stack"
+        },
+        "production": {
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "office-full-stack:build",
+        "dev": true,
+        "port": 8080
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "office-full-stack:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "office-full-stack:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "office-full-stack:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/office-full-stack/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  },
+}

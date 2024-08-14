@@ -1,0 +1,72 @@
+{
+  "Contacts": [
+    {
+      "name": "My Manager",
+      "method": [
+        {
+          "contactType": "EMAIL",
+          "value": "manager@company.com"
+        },
+        {
+          "contactType": "OFFICE PHONE",
+          "value": "000-000-0000"
+        },
+        {
+          "contactType": "PHONE",
+          "value": "111-111-1111"
+        }
+      ],
+      "title": "Senior Business Analyst"
+    }
+  ],
+  "Accounts": [
+    {
+      "name": "Meeting Software",
+      "system": "WEB",
+      "user": "username@company.com",
+      "login": "------",
+      "links": [
+        {
+          "urlLabel": "meeting Link",
+          "url": "https://meeting.company.com"
+        }
+      ]
+    }
+  ],
+  "Projects": {
+    "MyProject": {
+      "Documentations": [
+        {
+          "name": "Project Doc",
+          "link": "https://doc.company.com/doc1"
+        }
+      ]
+    }
+  },
+  "Todos": [
+    {
+      "name": "I need to do this",
+      "description": "bugfix",
+      "priority": 1,
+      "link": "",
+      "status": "Started"
+    }
+  ],
+  "Timesheets": [
+    {
+      "title": "Develop UI overview page",
+      "start": "2024-08-08T09:00",
+      "end": "2024-08-08T17:00",
+      "allDay": false,
+      "classNames": "logged",
+      "description": ""
+    },
+    {
+      "title": "Develop API",
+      "start": "2024-08-08T09:00",
+      "end": "2024-08-08T17:00",
+      "allDay": false,
+      "classNames": "pending"
+    }
+  ]
+}

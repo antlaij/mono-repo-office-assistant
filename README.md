@@ -22,6 +22,13 @@ npx create-nx-workspace@latest mono-repo-office --appName=office-micro-service -
 ```bat
 npx nx g @nx/next:init --keepExistingVersions --updatePackageScripts
 npx nx generate @nx/next:application --name=office-full-stack  --directory=apps/office-full-stack --projectNameAndRootFormat=as-provided --style=scss
+
+```
+
+
+### Generate nextjs module
+```bat
+pnpm exec nx generate @nx/nest:module --name=static --directory=apps/office-micro-service/src/app/modules --language=ts --nameAndDirectoryFormat=as-provided --no-interactive --dry-run
 ```
 
 
@@ -30,6 +37,8 @@ npx nx generate @nx/next:application --name=office-full-stack  --directory=apps/
 npx nx g @nx/nest:lib common-nest-lib --publishable --importPath=@mono-repo-workspace/common-nest-lib
 npx nx generate @nx/js:library config --unitTestRunner=jest --bundler=tsc --includeBabelRc --simpleName
 ```
+
+
 
 
 ### Create node library
@@ -42,6 +51,21 @@ npx nx generate @nx/js:library config --directory=libs/config --publishable --un
 ```bat
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
+```
+
+
+### Install @nestjs/serve-static
+```bat
+pnpm add @nestjs/serve-static
+```
+
+---
+
+## Application setting
+### Create .env file to store the environmental variables
+```txt
+NX_OFFICE_ROOT=C:\Temp\data
+NX_OFFICE_WEB=C:\Temp\webServer
 ```
 
 ---

@@ -1,0 +1,20 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Screen Reader</title>
+  <script>
+    const submitText = () => {
+      let textPanelEle = document.getElementById('text-panel');
+      let readAreaEle = document.getElementById('read-area');
+      readAreaEle.innerHTML = textPanelEle.value;
+    }
+  </script>
+</head>
+<body style="background-color: black;color: cadetblue;">
+  <textarea id="text-panel" rows="4" cols="200" style="background-color: #272740; color: aliceblue; font-size: xx-small;width: 100%;"></textarea>
+  <button style="background-color: #455a7f; color: wheat;" onclick="submitText();">Enter</button>
+  <pre id="read-area" style="white-space: pre-wrap; font-size: x-large;"></pre>
+</body>
+</html>

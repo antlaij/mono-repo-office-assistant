@@ -1,0 +1,56 @@
+{
+  "name": "office-helper",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/office-helper/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/apps/office-helper",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "apps/office-helper/src/main.ts",
+        "tsConfig": "apps/office-helper/tsconfig.app.json",
+        "assets": ["apps/office-helper/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "office-helper:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "office-helper:build:development"
+        },
+        "production": {
+          "buildTarget": "office-helper:build:production"
+        }
+      }
+    }
+  }
+}

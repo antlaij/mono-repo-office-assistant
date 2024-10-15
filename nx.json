@@ -38,7 +38,10 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/office-micro-service-e2e/**/*"]
+      "exclude": [
+        "apps/office-micro-service-e2e/**/*",
+        "apps/office-helper-e2e/**/*"
+      ]
     },
     {
       "plugin": "@nx/next/plugin",
@@ -69,6 +72,11 @@
   },
   "targetDefaults": {
     "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "@nx/esbuild:esbuild": {
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]

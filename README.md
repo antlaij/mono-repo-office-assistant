@@ -39,6 +39,10 @@ npx nx generate @nx/js:library config --unitTestRunner=jest --bundler=tsc --incl
 ```
 
 
+## Generate Nodejs app
+npx nx generate @nx/node:application office-helper --framework=none
+
+
 
 
 ### Create node library

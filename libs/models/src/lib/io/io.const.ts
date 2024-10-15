@@ -33,26 +33,57 @@ const DEV_PROJECT = [
   'Support'
 ];
 
-const OFFICE = [
-  'Development/Default/Project/Template/document',
-  'Development/Default/Project/Template/Local',
-  'Development/Default/Project/Template/VersionControl/Git',
-  'GreenApps/Batch',
-  'GreenApps/Batch/Log',
-  'GreenApps/Desktop',
-  'General-Information/Documentation/Contact',
-  'General-Information/HR',
-  'General-Information/Training',
-  'General-Information/Timesheet',
-  'ls/me/development/lab',
-  'ls/me/development/testing',
-  'ls/office/projects/office-assistant/development',
-  'ls/office/settings/Chrome',
-  'ls/office/settings/Edge',
-  'ls/office/settings/Shortcut',
-  'ls/office/settings/VSCode',
-  'Support'
-];
+const OFFICE = {
+  Development: {
+    Default: {
+      Project: {
+        Template: {
+          document: {},
+          Local: {},
+          VersionControl: {
+            Git: {},
+          },
+        }
+      }
+    }
+  },
+  GreenApps: {
+    Batch: {
+      Log: {},
+    },
+    Desktop: {},
+  },
+  ['General-Information']: {
+    Documentation: {
+      Contact: {},
+    },
+    HR: {},
+    Training: {},
+    Timesheet: {},
+  },
+  ls: {
+    me: {
+      development: {
+        lab: {},
+        testing: {},
+      },
+    },
+    office: {
+      projects: {
+        ['office-assistant']: {
+          development: {},
+        },
+      },
+      settings: {
+        Chrome: {},
+        Edge: {},
+        Shortcut: {},
+        VSCode: {},
+      },
+    },
+  },
+  Support: {},
+};
 
 const EXTENSION_TYPE = {
   photos: ['bmp', 'gif', 'jpg', 'jpeg', 'png', 'svg'],

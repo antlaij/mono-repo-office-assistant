@@ -73,6 +73,9 @@ pnpm add @nestjs/serve-static
 
 ## Application setting
 ### Create .env file to store the environmental variables
+```batch
+mkdir apps\office-micro-service\.env
+```
 ```txt
 NX_OFFICE_ROOT=C:\Temp\data
 NX_OFFICE_WEB=C:\Temp\webServer

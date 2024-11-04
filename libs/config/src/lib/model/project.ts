@@ -1,11 +1,14 @@
 
 export type TodoStatus = "Holding" | "Prioritized" | "Started" | "Finished";
 export type ContactType = 'PHONE' | 'OFFICE PHONE' | 'EMAIL' | 'WEB';
+export type ApplicationType = 'DESKTOP' | 'WEB' | 'ANDROID' | 'IOS';
+export type EnvironmentType = 'DEV' | 'TST' | 'SIT' | 'UAT' | 'PROD';
 
 export type OfficeAssistant = {
   Accounts: AccountManager[];
   Contacts: contact[];
   Projects: Projects;
+  Applications: Applications;
   Todos: Todo[];
   Timesheets: Timesheet[];
 };
@@ -35,13 +38,42 @@ export type contactMedia = {
   addition?: string;
 };
 
+export type Applications = {
+  [key: string]: Application;
+};
+
+type WebApplication = {
+  applicationType: 'WEB';
+  environment: EnvironmentType;
+  url: string;
+  Documentations: Documentation[];
+  Repositorie: Repository;
+};
+
+type DesktopApplication = {
+  applicationType: 'DESKTOP';
+  environment: EnvironmentType;
+  applicationpath: string;
+  Documentations: Documentation[];
+  Repositorie: Repository;
+};
+
+type MobiletopApplication = {
+  applicationType: "ANDROID" | "IOS";
+  environment: EnvironmentType;
+  Documentations: Documentation[];
+  Repositorie: Repository;
+};
+
+export type Application = WebApplication | DesktopApplication | MobiletopApplication;
+
 export type Projects = {
   [key: string]: Project;
 };
 
 export type Project = {
   Documentations: Documentation[];
-  Repositories: ProjectRepository[];
+  Repositories: Repository[];
 };
 
 export type Documentation = {
@@ -49,7 +81,7 @@ export type Documentation = {
   link: string;
 };
 
-export type ProjectRepository = {
+export type Repository = {
   name: string;
   repositoryURL: string;
   localPath: string;

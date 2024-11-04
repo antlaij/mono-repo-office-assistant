@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useThemeContext } from '../../app/contexts/ThemeContext';
 import styles from './sidebar.module.scss';
-import { Building2, FolderKanban, FolderOpenDot, HandHelping, LayoutDashboard, Watch } from 'lucide-react';
+import { AppWindow, Building2, FolderKanban, FolderOpenDot, HandHelping, LayoutDashboard, Watch } from 'lucide-react';
 
 export default function Sidebar() {
   const {toggleTheme, isDarkTheme} = useThemeContext();
@@ -19,6 +19,12 @@ export default function Sidebar() {
         <div className={styles['sidebar-item']}>
           <FolderKanban />
           <span className='sidebar-label'>Projects</span>
+        </div>
+      </Link>
+      <Link href="/applications">
+        <div className={styles['sidebar-item']}>
+          <AppWindow />
+          <span className='sidebar-label'>Applications</span>
         </div>
       </Link>
       <Link href="/storage">

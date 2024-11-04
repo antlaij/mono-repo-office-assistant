@@ -87,6 +87,14 @@ const DashboardPage: FC<PropsWithChildren> = ({ children }) => {
       </div>
       <div className={`${layoutStyles.flexCol}`}>
         <div className={`${layoutStyles.header} bg-slate-700`}>
+          <span>Applications</span>
+        </div>
+        <div className={`${layoutStyles.content}`}>
+          <pre>There are {Object.keys(data?.Applications || {}).length} Application(s) in file.</pre>
+        </div>
+      </div>
+      <div className={`${layoutStyles.flexCol}`}>
+        <div className={`${layoutStyles.header} bg-slate-700`}>
           <span>Todos</span>
         </div>
         <div className={`${layoutStyles.content}`}>

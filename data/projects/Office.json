@@ -43,6 +43,31 @@
       ]
     }
   },
+  "Applications": {
+    "Angular Single App": {
+      "applicationType": "WEB",
+      "environment": "DEV",
+      "url": "http://www.b.com",
+      "Documentations": [
+        {
+          "name": "Technical Specifications",
+          "link": "https://www.b.com/TechnicalSpecifications"
+        },
+        {
+          "name": "Member Portal",
+          "link": "https://www.b.com/Member Portal"
+        },
+        {
+          "name": "Vulnerability Report",
+          "link": "https://www.b.com/Vulnerability Report"
+        },
+        {
+          "name": "Migration",
+          "link": "https://www.b.com/Migration"
+        }
+      ]
+    }
+  },
   "Todos": [
     {
       "name": "I need to do this",
